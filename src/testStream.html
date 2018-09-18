@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitch Stream</title>
+
+  <!-- Frameworks -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <h1>Test Stream Functions</h1>
+  <div class = "col-md-6 align-self-center justify-content-center the_stream">
+    <iframe
+      src="http://player.twitch.tv/?channel=Sasquatch167&muted=true"
+      height="450"
+      width="800"
+      frameborder="0"
+      scrolling="no"
+      allowfullscreen="false"
+      id = "stream1"
+      >
+    </iframe>
+  </div>
+<!-- TODO: Duplicate iframe above for each StreamerTag - loop through array -->
+
+</body>
+<script>
+  var currentURL = new URL(window.location.href);
+  var gamer = (currentURL.searchParams.get("key"));
+  console.log("This is the gamer to be streamed: ")
+  console.log(currentURL.searchParams.get("key"));
+
+  streamer = document.getElementById("stream1");
+  streamer.setAttribute("src", "http://player.twitch.tv/?channel=" + gamer + "&muted=true");
+  // streamer = document.getElementById("stream2");
+  // streamer.setAttribute("src", "http://player.twitch.tv/?channel=" + gamer + "&muted=true");
+  // streamer = document.getElementById("stream3");
+  // streamer.setAttribute("src", "http://player.twitch.tv/?channel=" + gamer + "&muted=true");
+  // streamer = document.getElementById("stream4");
+  // streamer.setAttribute("src", "http://player.twitch.tv/?channel=" + gamer + "&muted=true");
+</script>
+</html>
