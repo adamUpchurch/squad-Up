@@ -9,12 +9,6 @@ import Squad from '../components/Squad/Squad.js';
 //import NavBar from '../components/NavBar/NavBar.js';
 //import VideoPlayer from '../components/VideoPlayer/VideoPlayer.js'
 
-const streamer = {
-  avatar:'',
-  name: 'Sasquatch167',
-  gameStreaming: '',
-}
-
 class App extends Component {
   render() {
     return (
