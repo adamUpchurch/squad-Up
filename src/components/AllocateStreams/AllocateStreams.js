@@ -1,8 +1,9 @@
 import React from 'react';
+import VideoPlayer from '../VideoPlayer/VideoPlayer.js';
 
 // Allocate stream
 
-class AllocaStreams extends React.Component {
+class AllocateStreams extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -17,16 +18,23 @@ class AllocaStreams extends React.Component {
     // Create an array of streamer names
     let gamers = (this.state.url.searchParams.get("key"));
     let gamerList = gamers.split(" ")
+    var tempStreamers = []
 
+
+    //Create a nested arrays of streamers 2x2
     var i;
     for (i = 0; i < gamerList.length; i += 2) {
-      this.setState({
-
-        streamers: streamers.push([`http://player.twitch.tv/?channel=${gamerList[i]}&muted=true`, `http://player.twitch.tv/?channel=${gamerList[i+1]}&muted=true`])
-
-      })
+      var j = i + 1;
+      if(i === gamerList.length - 1) {
+        tempStreamers.push([gamerList[i]])
+      } else {
+        tempStreamers.push([gamerList[i], gamerList[j]])
+      } if ( i >= 3) {
+        break;
+      }
     }
 
+    console.log(tempStreamers);
 
     {/* align-self-center justify-content-center the_stream */}
 
@@ -34,28 +42,17 @@ class AllocaStreams extends React.Component {
     return (
       <div className = "d-flex bd-highlight">
         {
-          var j;
-          for (j=0; i < this.state.streamers.length; i ++){
-            streamers.map((streamURL, index) => (
-              <div className = "col-md-6 flex-fill embed-responsive embed-responsive-16by9">
-                {/* <h5>{gamerList[index]}</h5> */}
-                <iframe
-                  className="embed-responsive-item"
-                  src={streamURL}
-                  scrolling="no"
-                  height="450"
-                  width="800"
-                  allowfullscreen="false"
-                  id = {`streamer${index}`}
-                  >
-                </iframe>
+          tempStreamers.map((nestedArray, outterIndex) => (
+            nestedArray.map((streamer, innerIndex) => (
+              <div>
+                <VideoPlayer streamerTag={nestedArray[innerIndex]} />
               </div>
-            ))}
-          }
+            ))
+          ))
         }
       </div>
     )
   }
 }
 
-export default VideoPlayer;
+export default AllocateStreams;
