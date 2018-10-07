@@ -1,16 +1,28 @@
 .App {
   text-align: center;
+  background-color: #1b1b2b;
+}
+
+body {
+  background-color: #1b1b2b;
 }
 
 .App-header {
-  background-color: #222;
-  height: 40px;
-  padding: 5px;
+  background-color: #78e4e0;
+  height: 5%;
+  padding: 1px;
   color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+
+}
+
+.createSquadStyle {
+  margin: 180px auto;
 }
 
 .App-title {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .App-intro {
@@ -20,4 +32,50 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+h5, h3 {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  opacity: .9;
+}
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
 }

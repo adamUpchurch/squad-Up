@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+const submitBtn = {
+  paddingLeft: '10px',
+};
+
 class CreateSquad extends React.Component {
   constructor(props) {
     super(props);
@@ -29,10 +33,10 @@ class CreateSquad extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Streamer:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input onChange={this.handleChange} placeHolder='Twitch streamerTag' style={{position: 'relative', padding: '0', border: '0', background: 'none', tapHighlightColor: 'rgba(0,0,0,0)',
+  touchCallout: 'none', color: '#78e4e0', fontSize: '1.5em'}}type="text" value={this.state.value}  />
         </label>
-        <input type="submit" value="Let's go" />
+        <input style={{marginLeft: '10px', backgroundColor: '#363A3D', color: '#78e4e0', fontSize: '1.5em'}} type="submit" value="Let's go"/>
       </form>
     );
   }

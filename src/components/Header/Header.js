@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return(
       <header className="App-header">
-        <h1 className="App-title">It is time to Squad Up!</h1>
+        <h1 className="App-title">Live Stream your Squad</h1>
       </header>
     )
   }
