@@ -44,8 +44,12 @@ class Squad extends React.Component {
               <div classaName="section group">
               	<div className="col span_1_of_2">
                   <div className='createSquadStyle'>
-                    <h5>Trying to create a dope streaming experience</h5>
-                    <h3>Multi-Streaming: Enter up to 4 streamers</h3>
+                    <h5>
+                      Trying to create a dope streaming experience
+                    </h5>
+                    <h3>
+                      Multi-Streaming: Enter up to 4 streamers
+                    </h3>
                     <CreateSquad />
                   </div>
                 </div>
