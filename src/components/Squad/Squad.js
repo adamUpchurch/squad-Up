@@ -37,6 +37,7 @@ class Squad extends React.Component {
       } else {
         return (
             <div>
+<<<<<<< HEAD
               <Header style={{width:'100%'}}/>
               <div style={{flexDirection: 'row', height: '500px', display: 'flex'}}>
               	<div style={{width: '50%', height: '100%', display: 'table'}}>
@@ -50,6 +51,27 @@ class Squad extends React.Component {
                       </h3>
                       <CreateSquad />
                     </div>
+||||||| merged common ancestors
+              <Header />
+              <div classaName="section group">
+              	<div className="col span_1_of_2">
+                  <div className='createSquadStyle'>
+                    <h5>Trying to create a dope streaming experience</h5>
+                    <h3>Multi-Streaming: Enter up to 4 streamers</h3>
+                    <CreateSquad />
+=======
+              <Header />
+              <div classaName="section group">
+              	<div className="col span_1_of_2">
+                  <div className='createSquadStyle'>
+                    <h5>
+                      Trying to create a dope streaming experience
+                    </h5>
+                    <h3>
+                      Multi-Streaming: Enter up to 4 streamers
+                    </h3>
+                    <CreateSquad />
+>>>>>>> 566bd461778735e47c518a1a38b072faf3b34bd2
                   </div>
                 </div>
                 <div style={{width: '50%', height: '100%'}}>

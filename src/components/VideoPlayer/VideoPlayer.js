@@ -17,10 +17,20 @@ class VideoPlayer extends React.Component {
               className="embed-responsive-item"
               src={this.state.gamerSrc}
               scrolling="no"
+<<<<<<< HEAD
               height='450'
               width='800'
               frameborder="0"
               marginHeight='0'
+||||||| merged common ancestors
+              height="450"
+              width="800"
+              padding='0'
+=======
+              height="50%"
+              frameborder="0"
+              marginHeight='0'
+>>>>>>> 566bd461778735e47c518a1a38b072faf3b34bd2
               border='0'
               margin='0'
               allowFullScreen="true"
