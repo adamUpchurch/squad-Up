@@ -20,22 +20,3 @@ class App extends Component {
 }
 
 export default App;
-
-/*
-examply of how to create a functional component
-
-const ChildComponent = () => {
-  return (
-    <div>
-      <p>I am the child</p>
-    </div>
-  );
-};
-
-const squadLogo = () => {
-  return (
-
-  );
-};
-
-*/

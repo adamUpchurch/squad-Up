@@ -33,10 +33,10 @@ class CreateSquad extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          <input onChange={this.handleChange} placeHolder='Twitch streamerTag' style={{position: 'relative', padding: '0', border: '0', background: 'none', tapHighlightColor: 'rgba(0,0,0,0)',
-  touchCallout: 'none', color: '#78e4e0', fontSize: '1.5em'}}type="text" value={this.state.value}  />
+          <input onChange={this.handleChange} placeHolder='Twitch streamerTags' style={{position: 'relative', padding: '0', border: 'none', background: 'none', touchCallout: 'none', color: '#78e4e0', fontSize: '1.5em', borderBottom: '1px solid white', outline: 'none'}} type="text" value={this.state.value}  />
         </label>
-        <input style={{marginLeft: '10px', backgroundColor: '#363A3D', color: '#78e4e0', fontSize: '1.5em'}} type="submit" value="Let's go"/>
+
+        <input className='onHover'style={{marginLeft: '10px', backgroundColor: '#78e4e0', color: 'white', fontSize: '1.5em', borderRadius:'4px', border: 'none', padding: '7px'}} type="submit" value="Let's go! 📺"/>
       </form>
     );
   }

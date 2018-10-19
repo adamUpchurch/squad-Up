@@ -44,9 +44,7 @@ class AllocateStreams extends React.Component {
         {
           tempStreamers.map((nestedArray, outterIndex) => (
             nestedArray.map((streamer, innerIndex) => (
-              <div>
                 <VideoPlayer streamerTag={nestedArray[innerIndex]} />
-              </div>
             ))
           ))
         }
