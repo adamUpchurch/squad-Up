@@ -40,11 +40,13 @@ class AllocateStreams extends React.Component {
 
 
     return (
-      <div className = "d-flex bd-highlight">
+      <div className='flex-container'>
         {
           tempStreamers.map((nestedArray, outterIndex) => (
             nestedArray.map((streamer, innerIndex) => (
+              <div className={'stream'+innerIndex}>
                 <VideoPlayer streamerTag={nestedArray[innerIndex]} />
+              </div>
             ))
           ))
         }

@@ -57,6 +57,8 @@ class Squad extends React.Component {
                   </img>
                 </div>
               </div>
+              <div>
+              </div>
             </div>
         );
       }
