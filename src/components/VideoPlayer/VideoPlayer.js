@@ -11,7 +11,7 @@ class VideoPlayer extends React.Component {
 
   render() {
     return (
-      <div className = "d-flex bd-highlight">
+      <div className = "d-flex">
         {<div className = "col-md-6 flex-fill embed-responsive embed-responsive-16by9">
             <iframe
               className="embed-responsive-item"
