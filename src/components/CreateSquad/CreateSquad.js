@@ -22,7 +22,7 @@ class CreateSquad extends React.Component {
   }
 
   handleSubmit(event) {
-    if (this.state.value != '') {
+    if (this.state.value !== '') {
       this.state.url = `src/testStream.html?key=${this.state.value}`;
       window.open(`src/testStream.html?key=${this.state.value}`);
       event.preventDefault();
