@@ -20,7 +20,9 @@ class Squad extends React.Component {
       // Determines if stream is requested,
       if (params.has('key')) {
         return (
-          <AllocateStreams />
+          <div>
+            <AllocateStreams />
+          </div>
         );
       } else {
         return (

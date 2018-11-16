@@ -11,10 +11,9 @@ class VideoPlayer extends React.Component {
 
   render() {
     return (
-      <div className = "d-flex">
-        {<div className = "col-md-6 flex-fill embed-responsive embed-responsive-16by9">
+        <div className = "col-md-6 flex-fill embed-responsive">
             <iframe
-              className="embed-responsive-item"
+              className="embed-responsive-item streamPlayer"
               src={this.state.gamerSrc}
               scrolling="no"
               height='337'
@@ -26,8 +25,7 @@ class VideoPlayer extends React.Component {
               allowFullScreen="true"
               >
             </iframe>
-          </div>}
-      </div>
+          </div>
     )
   }
 }

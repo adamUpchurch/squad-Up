@@ -39,21 +39,23 @@ class AllocateStreams extends React.Component {
     {/* align-self-center justify-content-center the_stream */}
 
 
+
     return (
       <div className="container">
-        <div className="row no-gutters mh-50">
           <div className='flex-container'>
           {
           tempStreamers.map((nestedArray, outterIndex) => (
-          nestedArray.map((streamer, innerIndex) => (
-          <div className={'stream'+innerIndex}>
-            <VideoPlayer streamerTag={nestedArray[innerIndex]} />
-          </div>
-          ))
+            <div className="row no-gutters">
+              {nestedArray.map((streamer, innerIndex) => (
+                <div className={'d-flex stream'+innerIndex}>
+                  <VideoPlayer streamerTag={nestedArray[innerIndex]} />
+                </div>
+              ))}
+            </div>
+
           ))
           }
           </div>
-        </div>
       </div>
     )
   }
