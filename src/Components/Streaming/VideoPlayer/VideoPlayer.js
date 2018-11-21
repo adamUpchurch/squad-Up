@@ -11,23 +11,26 @@ class VideoPlayer extends React.Component {
 
   render() {
     return (
+<<<<<<< HEAD:src/components/VideoPlayer/VideoPlayer.js
       <div className = "d-flex">
         {<div className = "col-md-6 flex-fill embed-responsive embed-responsive-16by9">
+||||||| merged common ancestors
+      <div className = "d-flex bd-highlight">
+        {<div className = "col-md-6 flex-fill embed-responsive embed-responsive-16by9">
+=======
+
+>>>>>>> handleMultipleStreamer:src/Components/Streaming/VideoPlayer/VideoPlayer.js
             <iframe
-              className="embed-responsive-item"
+              className="streamPlayer"
               src={this.state.gamerSrc}
               scrolling="no"
-              height='337'
-              width='600'
               frameborder="0"
               marginHeight='0'
               border='0'
-              margin='0'
               allowFullScreen="true"
+              style={{justifySelf: 'center'}}
               >
             </iframe>
-          </div>}
-      </div>
     )
   }
 }

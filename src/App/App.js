@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import './App.css';
-
-//TODO: Build CreateSquad, NavBar & VideoPlayer
-// TODO: Embed Chat in a pop-out extension: https://dev.twitch.tv/docs/embed/chat/
-
-import Squad from '../components/Squad/Squad.js';
-//import NavBar from '../components/NavBar/NavBar.js';
-//import VideoPlayer from '../components/VideoPlayer/VideoPlayer.js'
+import Streaming from '../Components/Streaming/Streaming.js'
+import HomePage from '../Components/HomePage/HomePage.js'
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      url: new URL(window.location.href),
+
+    }
+  };
+
+
   render() {
-    return (
-      <div className="App">
-        <Squad />
-      </div>
-    );
+      // Creates params to later test if streamer request is in url
+      let params = new URLSearchParams(this.state.url.search.slice(1));
+
+      // Determines if stream is requested,
+      if (params.has('key')) {
+        return <Streaming />;
+      } else {
+        return <HomePage />;
+      }
   }
 }
 
