@@ -40,6 +40,10 @@ body {
 }
 
 @media only screen and (min-width: 600px) {
+  #mobileText{
+    display: none;
+    
+  }
 }
 
 @media only screen and (max-width: 799px) {
@@ -74,7 +78,7 @@ body {
       width: 450px;
     }
     .streamerInput {
-      width: 400px;
+      width: 450px;
       font-size: 1.5em;
     }
     .giphyStyle {

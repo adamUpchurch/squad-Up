@@ -3,7 +3,7 @@ import VideoPlayer from '../VideoPlayer/VideoPlayer.js';
 
 {/*'repeat(2, 1fr) / repeat(2, 1fr)'*/}
 const wrapper = {
-  border: '1px solid white',
+  //border: '1px solid white',
   minHeight: '100vh',
   display: 'grid-inline',
   gridGap:'5px',
