@@ -20,6 +20,12 @@ const header = {
   textAlign: 'center'
 };
 
+const feedbackStyle = {
+  fontSize: '0.75em',
+  color: 'white',
+  textAlign: 'center'
+}
+
 
 const spanAcross = {
     gridColumn: '1 / -1',
@@ -40,6 +46,7 @@ class HomePage extends Component {
           <LeftSide />
           <Giphy />
         </div>
+        <p style={feedbackStyle}>Please send feedback and suggestions to <a href="mailto:adam@ausolution.com?Subject=SquadUp.gg" target="_top">adam@ausolution.com</a> -- I hope you enjoy it!</p>
       </div>
     );
   }
