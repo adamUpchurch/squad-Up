@@ -7,6 +7,10 @@
   background-color: #1b1b2b;
 }
 
+body {
+  background-color: #1b1b2b;
+  display: grid;
+}
 
 .streamPlayer {
 
@@ -24,17 +28,34 @@
   width: 100%;
   height: 100%;
   align-items: center;
+<<<<<<< HEAD
 }
 
 body {
   background-color: #1b1b2b;
   display: grid;
+||||||| merged common ancestors
+||||||| merged common ancestors
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+=======
+body {
+  background-color: #1b1b2b;
+  display: grid;
+>>>>>>> handleMultipleStreamer
+=======
+
+>>>>>>> handleMultipleStreamer
 }
 
 @media only screen and (min-width: 600px) {
   #mobileText{
     display: none;
-    
+
   }
 }
 
