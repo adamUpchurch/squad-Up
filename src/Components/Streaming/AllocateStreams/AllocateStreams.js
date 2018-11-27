@@ -9,7 +9,6 @@ const wrapper = {
   gridGap:'5px',
   gridTemplateColumns: 'repeat(auto-fit, minmax(168px, 1fr))',
   gridTemplateRows: 'repeat(auto-fit, minmax(280px, 1fr))',
-  justifyItems: 'center'
 };
 
 class AllocateStreams extends React.Component {

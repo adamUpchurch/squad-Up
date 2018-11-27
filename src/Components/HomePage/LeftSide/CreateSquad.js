@@ -67,7 +67,7 @@ function ShareLink(props) {
   }
 
     return (
-      <button className='onHover'style={submitButtonSyle} type='button' value='Share link' onClick={handleClick}><img src='http://www.icon-park.com/imagefiles/link_icon_white.png' alt="copy link" height="32" width="32"/></button>
+      <button className='onHover shareLinkStyle'style={submitButtonSyle} type='button' value='Share link' onClick={handleClick}><img src='http://www.icon-park.com/imagefiles/link_icon_white.png' alt="copy link" height="32" width="32"/></button>
     );
 }
 
