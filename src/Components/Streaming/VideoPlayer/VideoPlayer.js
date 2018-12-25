@@ -10,6 +10,14 @@ class VideoPlayer extends React.Component {
 
 
   render() {
+    const singleStreamerStyle = (tf) => {
+      if (tf) {
+        return {
+          height: 'calc(100vw * .54)',
+          width: '100vw'
+        }
+      }
+    }
     return (
             <iframe
               className="streamPlayer"
@@ -19,7 +27,7 @@ class VideoPlayer extends React.Component {
               marginHeight='0'
               border='0'
               allowFullScreen="true"
-              style={{justifySelf: 'center'}}
+              style={singleStreamerStyle(this.props.singleGamer)}
               >
             </iframe>
     )

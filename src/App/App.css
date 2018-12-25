@@ -1,14 +1,17 @@
+:root {
+  --main-bg-color: #1b1b2b; /* 1b1b2b */
+}
 * {
   font: "Product Sans", Helvetica, arial, sans-serif;
   color: white;
 }
 .App {
   text-align: center;
-  background-color: #1b1b2b;
+  background-color: var(--main-bg-color);
 }
 
 body {
-  background-color: #1b1b2b;
+  background-color: var(--main-bg-color);
   display: grid;
 }
 
@@ -27,9 +30,8 @@ body {
   height: 100%;
 }
 
-body {
-  background-color: #1b1b2b;
-  display: grid;
+.nav-wrapper {
+  @extend purple darken-4;
 }
 
 @media only screen and (max-width: 500px) {
@@ -56,8 +58,8 @@ body {
     width: auto;
   }
   .streamPlayer {
-    height: calc(98vw * .56);
-    width: 98vw;
+    height: calc(100vw * .56);
+    width: 100vw;
   }
   .streamerInput {
     width: 400px;
@@ -67,8 +69,8 @@ body {
 }
 @media only screen and (min-width: 700px) {
   .streamPlayer {
-    width: 48vw;
-    height: calc(49vw * .56);
+    width: 50vw;
+    height: calc(50vw * .56);
   }
   .giphyStyle {
     justify-self: center;
@@ -96,39 +98,3 @@ body {
       font-size: 1.25em;
     }
 }
-
-/*
-@media only screen and (min-width: 1016px) {
-    .streamPlayer {
-      height: 281px;
-      width: 500px;
-    }
-}
-
-@media only screen and (min-width: 1116px) {
-    .streamPlayer {
-      height: 309px;
-      width: 550px;
-    }
-
-    .giphyStyle {
-      height: 600px;
-      width: auto;
-    };
-}
-
-@media only screen and (min-width: 1216px) {
-    .streamPlayer {
-      height: 337px;
-      width: 600px;
-    }
-
-}
-
-@media only screen and (min-width: 1400px) {
-    .streamPlayer {
-      height: 370px;
-      width: 660px;
-    }
-
-} */

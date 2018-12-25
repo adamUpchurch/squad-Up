@@ -99,7 +99,7 @@ class CreateSquad extends React.Component {
 
   handleSubmit(event) {
     if (this.state.value !== '') {
-      this.state.url = `?key=${this.state.value}`;
+      this.state.url = `?streamers=${this.state.value}`;
       window.open(this.state.url);
       event.preventDefault();
     }
@@ -112,11 +112,10 @@ class CreateSquad extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit} style={formWrapper}>
           <label>
-            <input onChange={this.handleChange} placeHolder='Enter up to 4 Twitch streamer tags' style={sreamerInputStyle} className = 'streamerInput' type="text" value={this.state.value} />
+            <input onChange={this.handleChange} placeHolder='Enter up to 4 Twitch streamers' style={sreamerInputStyle} className = 'streamerInput' type="text" value={this.state.value} />
             <ShareLink value={this.state.value}/>
           </label>
-          <input id = 'streamerTags' style={linkStyle} type="text" value={`squadup.gg/?key=${this.state.value}`} />
-
+          <input id = 'streamerTags' style={linkStyle} type="text" value={`squadup.gg/?streamers=${this.state.value}`} />
 
           <input className='onHover'style={submitButtonSyle} type="submit" value="Let's go! 📺"/>
         </form>

@@ -6,7 +6,6 @@ const wrapper = {
   //border: '1px solid white',
   minHeight: '100vh',
   display: 'grid-inline',
-  gridGap:'5px',
   gridTemplateColumns: 'repeat(auto-fit, minmax(168px, 1fr))',
   gridTemplateRows: 'repeat(auto-fit, minmax(280px, 1fr))',
 };
@@ -16,23 +15,23 @@ class AllocateStreams extends React.Component {
     super(props);
     this.state = {
       url: new URL(window.location.href),
-      streamers: ['Symfuhny', 'Monstercat', 'KamoLRF', 'pokimane']
+      streamers: []
     }
   };
 
   render() {
 
     // Create an array of streamer names
-    let gamers = (this.state.url.searchParams.get("key"));
+    let gamers = (this.state.url.searchParams.get("streamers"));
     let gamerList = gamers.split(" ")
+    const isSingleStreamer = (gamerList.length === 1)
 
-    console.log(this.state.streamers);
 
     return (
       <div style={wrapper} className='streamPlayerWrapper'>
           {
           gamerList.map((streamer, index) => (
-            <VideoPlayer streamerTag={streamer} />
+            <VideoPlayer singleGamer={isSingleStreamer} streamerTag={streamer} />
           ))
           }
       </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Streaming from '../Components/Streaming/Streaming.js'
 import HomePage from '../Components/HomePage/HomePage.js'
+// import Snowflakes from '../Components/Snowflake/Snowflake.js'
 
 class App extends Component {
   constructor(props){
@@ -18,7 +19,7 @@ class App extends Component {
       let params = new URLSearchParams(this.state.url.search.slice(1));
 
       // Determines if stream is requested,
-      if (params.has('key')) {
+      if (params.has('streamers')) {
         return <Streaming />;
       } else {
         return <HomePage />;
